@@ -30,5 +30,21 @@ class test_cicdTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
+    let A = 10, B = 5
+    
+    func testAdd() {
+        XCTAssertEqual(A + B, 15)
+    }
+    
+    func testSubtract() {
+        XCTAssertEqual(A - B, 5)
+    }
+    func testMultiple() {
+        XCTAssertEqual(A * B, 50)
+    }
+    func testDivide() {
+        XCTAssertEqual(A / B, 2)
+    }
 
 }

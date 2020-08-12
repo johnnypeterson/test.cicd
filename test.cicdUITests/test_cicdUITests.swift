@@ -27,7 +27,9 @@ class test_cicdUITests: XCTestCase {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
         app.launch()
-
+        XCUIApplication().staticTexts["Hello, World!"].tap()
+        
+        XCTAssertEqual("Hello, World!", "Hello, World!")
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
