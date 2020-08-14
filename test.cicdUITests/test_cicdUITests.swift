@@ -33,6 +33,16 @@ class test_cicdUITests: XCTestCase {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
+    
+    func testTwo() {
+        
+        let app = XCUIApplication()
+        app.staticTexts["Hello, World!"].tap()
+        
+        let element = app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element
+        element.tap()
+        XCTAssertEqual(1, 1)
+    }
 
     func testLaunchPerformance() throws {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
